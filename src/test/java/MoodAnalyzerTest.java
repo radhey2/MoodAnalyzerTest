@@ -20,7 +20,8 @@ public class MoodAnalyzerTest {
     public void givenMessage_whenNull_ShouldReturnNull(){
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
         String mood2 = moodAnalyzer.analyseMood();
-        Assertions.assertEquals("Invalid",mood2);
+        Assertions.assertEquals("Happy",mood2);
+        System.out.println(mood2);
     }
 
 }
