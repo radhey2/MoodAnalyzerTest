@@ -23,5 +23,16 @@ public class MoodAnalyzerTest {
         Assertions.assertEquals("Happy",mood2);
         System.out.println(mood2);
     }
-
+    @Test
+    public void givenMessage_whenNull_ShouldThrowMoodAnalysisException() throws MoodAnalysisException {
+        try {
+            MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
+            String mood3 = moodAnalyzer.analyseMood();
+            Assertions.assertEquals("SAD",mood3);
+            System.out.println(mood3);
+        }
+        catch (MoodAnalysisException e){
+            e.printStackTrace();
+        }
+    }
 }
